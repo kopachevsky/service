@@ -1,0 +1,14 @@
+name: Build sdr-ingestion-rest image
+
+on:
+  push:
+      branches: [main, dev, qa, staging]
+  workflow_dispatch:
+
+jobs:
+  build-docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: echo
+        run: echo "Hello spock"
