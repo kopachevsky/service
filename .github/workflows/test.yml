@@ -13,6 +13,7 @@ jobs:
 
       - name: Step is going to fail
         run: exit 1
+        continue-on-error: true
 
       - name: Step To run on failure
         if: ${{ failure() }}
