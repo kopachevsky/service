@@ -12,11 +12,10 @@ jobs:
         run: echo Passing step
 
       - name: Step is going to fail
-        run: exit 0
+        run: exit 1
 
       - name: Step To run on failure
         if: ${{ failure() }}
         run: echo "executed"
       - name: Run last
-        if: ${{ failure() }}
         run: echo "I'm running"
