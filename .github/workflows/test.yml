@@ -9,14 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Step is going to pass
-        run: echo Passing step
+        run: echo $HOME
 
-      - name: Step is going to fail
-        run: exit 1
-        continue-on-error: true
-
-      - name: Step To run on failure
-        if: ${{ failure() }}
-        run: echo "executed"
-      - name: Run last
-        run: echo "I'm running"
