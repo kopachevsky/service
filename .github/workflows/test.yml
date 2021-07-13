@@ -9,5 +9,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - name: Step is going to pass
-        run: echo $HOME
+        run: echo "$HOME"
 
